@@ -1,0 +1,25 @@
+using msvc ;
+
+use-project /boost : C:\\Program\ Files\\boost\\boost_1_38_0 ;
+
+lib gl : : <name>OpenGL32 <search>C:\\Program\ Files\\Microsoft\ SDKs\\Windows\\v6.1\\Lib <link>static ;
+
+lib glu : : <name>GLU32 <search>C:\\Program\ Files\\Microsoft\ SDKs\\Windows\\v6.1\\Lib <link>static ;
+
+lib glut : : <name>glut32 <search>C:\\Program\ Files\\NVIDIA\ Corporation\\NVIDIA\ OpenGL\ SDK\ 10\\external\\lib <link>static ;
+
+project : requirements
+	<include>C:\\Program\ Files\\boost\\boost_1_38_0
+	<include>C:\\Program\ Files\\Microsoft\ SDKs\\Windows\\v6.1\\Include
+	<include>C:\\Program\ Files\\NVIDIA\ Corporation\\NVIDIA\ OpenGL\ SDK\ 10\\external\\include
+	<include>Math
+	<include>aiengine
+	<include>cgengine
+	<library>gl
+	<library>glu
+	<library>glut
+	;
+
+build-project application/ch2 ;
+
+install ./ : application/ch2 ;

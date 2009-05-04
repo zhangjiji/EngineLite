@@ -1,0 +1,3 @@
+exe Miner : main.cpp Miner.cpp ;
+
+install ./ : Miner ;

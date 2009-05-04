@@ -1,0 +1,5 @@
+*.rsp
+*.obj
+*.pdb
+*.manifest
+./cgengine/gameart/*

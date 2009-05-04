@@ -1,0 +1,8 @@
+project : usage-requirements 
+	<include>.
+	<include>FSM
+	<include>Message
+	<include>Game
+	;
+
+lib ai : Message/MessageDispatcher.cpp Game/EntityManager.cpp /boost//date_time/<link>static ;
